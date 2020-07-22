@@ -1,6 +1,6 @@
-import theModule from "./source"
+import jsonbinApi from "./source"
 import test from "ava"
 
 test("main", t => {
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.is(jsonbinApi("unicorns"), "unicorns & rainbows")
 })

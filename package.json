@@ -10,7 +10,7 @@
 		"dist"
 	],
 	"engines": {
-		"node": ">=10"
+		"node": ">=10.17"
 	},
 	"scripts": {
 		"build": "tsc",
@@ -19,7 +19,13 @@
 		"prepublishOnly": "tsc"
 	},
 	"keywords": [],
-	"dependencies": {},
+	"dependencies": {
+		"@sindresorhus/is": "^3.0.0",
+		"ky": "^0.23.0",
+		"ky-universal": "^0.8.1",
+		"split-string": "^6.1.0",
+		"type-fest": "^0.16.0"
+	},
 	"devDependencies": {
 		"@richienb/tsconfig": "^0.1.1",
 		"ava": "^3.6.0",
