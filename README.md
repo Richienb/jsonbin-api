@@ -13,7 +13,7 @@ npm install jsonbin-api
 ## Usage
 
 ```js
-const jsonbin = require("jsonbin");
+const jsonbin = require("jsonbin-api");
 const store = jsonbin("myapp", "token e5334b72-244c-46d3-9e4f-27f1a5776816");
 
 (async () => {
