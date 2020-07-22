@@ -1,22 +1,27 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# jsonbin-api [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/jsonbin-api/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/jsonbin-api)
 
-My awesome module.
+Simple data storage with jsonbin.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/jsonbin-api.png)](https://npmjs.com/package/jsonbin-api)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install jsonbin-api
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const jsonbin = require("jsonbin");
+const store = jsonbin("myapp", "token e5334b72-244c-46d3-9e4f-27f1a5776816");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	await store.set("foo.bar", "baz");
+
+	await store.get("foo.bar");
+	//=> "baz"
+})();
 ```
 
 ## API
