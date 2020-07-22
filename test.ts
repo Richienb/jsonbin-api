@@ -7,6 +7,7 @@ test("main", async t => {
 	if (!token) {
 		console.log("Set JSONBIN_TOKEN to test.")
 		t.pass()
+		return
 	}
 
 	const store = jsonbin("test_jsonbin_api", `token ${token}`)
